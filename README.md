@@ -1,4 +1,4 @@
-#CLICKS PER SECOND TRAINER APPLICATION
+##CLICKS PER SECOND TRAINER APPLICATION
 How fast can you click your mouse?
 
 Current Version: 1.0
