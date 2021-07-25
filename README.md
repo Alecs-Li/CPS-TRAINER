@@ -4,6 +4,7 @@ How fast can you click your mouse?
 Current Version: 1.0
 
 - Desktop Application Built by Alexander Li <alexli01890@gmail.com>
+- Download It Here: 
 - Check out my Linktree: https://linktr.ee/alecs.li
 
 
