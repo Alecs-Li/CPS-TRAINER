@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title style="color:white">CPS Trainer - Version 1.0</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body style="background:rgb(44, 47, 51);">
+  <style>
+    a:active {
+      background-color: yellow;
+    }
+    </style>
+  <a style="text-align: right;" href= "https://www.youtube.com./watch?v=dQw4w9WgXcQ">
+    🐰</a>
+<h1></h1>
+        <h2>
+            <style>
+            .line {
+                border: 2px outset rgb(255, 255, 255);
+                background-color: rgb(255, 255, 255);    
+                text-align: center;
+            }
+        </style>
+        <div class="line"> </div>
+        </h2>
+
+        <br></br>
+      </head>
+      <body>
+        <img id ="logo" src="https://i.imgur.com/fpLVXEY.jpg" />
+        <div id="content">
+          Timer: <span id="timer"></span><br/>
+          Score: <span id="score"></span><br/>
+          CPS: <span id="clicks"></span>
+        </div>
+        <div id="clickarea">
+          <button style= "color: black"; id="start">Click To Start</button>
+        </div>  
+<p>Version 1.0</p>
+        <script type="text/javascript">
+          var score; 
+          var duration = 10; 
+          var startTime; 
+          var ended = true; 
+          var timerTxt = document.getElementById("timer");
+          var scoreTxt = document.getElementById("score");
+          var clicksTxt = document.getElementById("clicks");
+          var startBtn = document.getElementById("start");
+          var clickArea = document.getElementById("clickarea");
+          var show = function(elem) {
+            elem.style.display = 'inline';
+          };
+          var hide = function(elem) {
+            elem.style.display = 'none';
+          };
+          function startGame() {
+            hide(startBtn);
+            score = -1;
+            ended = false;
+            startTime = new Date().getTime();
+            var timerId = setInterval(function() {
+              var total = (new Date().getTime() - startTime) / 1000;
+              if (total < duration) {
+                timerTxt.textContent = total.toFixed(3);
+                clicksTxt.textContent = (score / total).toFixed(2);
+              } else {
+                ended = true;
+                clearInterval(timerId);
+                endGame();
+              }
+            }, 1);
+        }
+        function endGame() {
+          var clicsBySeconds = (score / duration).toFixed(2);
+          timerTxt.textContent = duration.toFixed(3);
+          clicksTxt.textContent = clicsBySeconds;
+          show(startBtn);
+          setTimeout(function() {
+              if(clicsBySeconds < 10){
+                alert('Your CPS was: ' + clicsBySeconds + '. Good Job!');
+              }
+          }, 10);
+
+          setTimeout(function() {
+                if(clicsBySeconds >= 10){
+                alert('Woah! Your CPS was: ' + clicsBySeconds);;
+              }
+          }, 10);
+        }
+        startBtn.addEventListener("click", function(e) {
+          startGame();
+        });
+        clickArea.addEventListener("click", function(e) {
+          if (!ended) {
+            score++;
+            scoreTxt.textContent = score;
+          }
+        });
+      </script>
+    </body>
+</html>
