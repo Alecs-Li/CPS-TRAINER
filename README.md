@@ -5,6 +5,7 @@ Current Version: 1.0
 
 - Desktop Application Built by Alexander Li <alexli01890@gmail.com>
 - Download It Here: https://www.mediafire.com/file/aqu17bofsyaj59g/CPS+TRAINER+-+Version+1.0+Setup+1.0.0.exe/file
+- Demo Video: https://youtu.be/4bCjff5CSfo
 - Check out my Linktree: https://linktr.ee/alecs.li
 
 
